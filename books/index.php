@@ -40,7 +40,7 @@
             <th>Tahun</th>
             <th>Genre</th>
             <th>Stok</th>
-            <th>Aksi</th>
+            <th colspan="2">Aksi</th>
         </tr>
         <?php
         $sql = "SELECT * FROM buku";
@@ -58,6 +58,7 @@
                         <td>".$row['tahun_terbit']."</td>
                         <td>".$row['genre']."</td>
                         <td>".$row['stok']."</td>
+                        <td><a href='update_book.php?id_buku=".$row['id_buku']."'>Edit</a></td>
                         <td><a href='remove_book.php?id_buku=".$row['id_buku']."' onclick=\"return confirm('Yakin ingin menghapus buku ini?');\">Hapus</a></td>
 
                       </tr>";
