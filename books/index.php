@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Daftar Buku</title>
+        <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 80%;

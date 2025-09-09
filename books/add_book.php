@@ -6,9 +6,11 @@ kolomnya salah
 
 <head>
     <title>Tambah Buku</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="POST">
+    <h1 class="titleheader">Tambah Buku</h1>
+    <form action="" method="POST" class="form-container">
         <label>Masukkan Judul :</label>
         <input type="text" name="judul" required/><br>
         <label>Masukkan Penulis :</label>
@@ -17,12 +19,23 @@ kolomnya salah
         <input type="text" name="penerbit" required/><br>
         <label>Masukkan Tahun Terbit :</label>
         <input type="number" name="tahun_terbit" required/><br>
-        <label>Masukkan Genre :</label>
-        <input type="text" name="genre" required/><br>
+        Genre: 
+            <select name="genre" id="genre" class="select">
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="horror">Horror</option>
+                <option value="biography">Biography</option>
+                <option value="self-help">Self-Help</option>
+                <option value="history">History</option>
+            </select>
+            <br>
         <label>Masukkan Stok :</label>
         <input type="number" name="stok" required/><br>
         <!-- tag, alt -->
-        <input type="submit" name="submit" value="Tambah Buku" />
+        <input type="submit" name="submit" value="Tambah Buku" class="button"/>
     </form>
     <?php 
         if (isset ($_POST['submit'])){
@@ -36,6 +49,7 @@ kolomnya salah
             $sql = "INSERT INTO buku(judul, penulis, penerbit, tahun_terbit, genre, stok) VALUES('$judul', '$penulis', '$penerbit', '$tahun_terbit', '$genre', '$stok')";
             if ($conn ->query($sql)===TRUE){
                 echo "Buku berhasil ditambahkan";
+                echo "<br><a href='index.php'>Lihat Daftar Buku</a>";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
