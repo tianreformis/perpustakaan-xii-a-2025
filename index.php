@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Perpustakaan SMAS Kristen Kanaan Banjarmasin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div style="
-    display:flex; 
-    justify-content: center;
-    align-items:center;
-    ">
-        <h1>Selamat Datang di Perpustakaan SMAS Kristen Kanaan Banjarmasin</h1>
-        
-    </div>
+    <h1>Selamat Datang di <br> Perpustakaan SMAS Kristen Kanaan Banjarmasin</h1>
     <a href="books/index.php">Lihat Koleksi Buku</a>
-</body>
 
+    <footer>© 2025 Perpustakaan SMAS Kristen Kanaan Banjarmasin</footer>
+</body>
 </html>
